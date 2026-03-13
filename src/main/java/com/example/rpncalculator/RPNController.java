@@ -22,7 +22,7 @@ public class RPNController {
                 if (button.getText().equals("=")) { button.setOnAction(this::calculate);
                 } else if (button.getText().equals("Clear")) {button.setOnAction(this::clear);
                 } else {
-                    button.setOnAction(event -> input.appendText(button.getText()));
+                    button.setOnAction(_ -> input.appendText(button.getText()));
                 }
             }
         }
