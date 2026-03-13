@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
+import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 public class RPNController {
@@ -13,16 +14,18 @@ public class RPNController {
     private TextArea input;
 
     @FXML
-    private Button one;
+    private GridPane buttonGroup;
 
     @FXML
-    protected void onOneClicked(ActionEvent event) { onButtonClicked(1); }
-    @FXML
-    protected void onTwoClicked(ActionEvent event) { onButtonClicked(2); }
-    @FXML
-    protected void onThreeClicked(ActionEvent event) { onButtonClicked(3); }
-
-
-    protected void onButtonClicked(int n) { input.appendText(String.valueOf(n));}
+    public void initialize() {
+        // Find and configure all buttons within buttonGroup
+        for (javafx.scene.Node node : buttonGroup.getChildren()) {
+            if (node instanceof Button button) {
+                button.setOnAction(event -> {
+                    input.appendText(button.getText());
+                });
+            }
+        }
+    }
 
 }
