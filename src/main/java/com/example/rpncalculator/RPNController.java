@@ -14,6 +14,8 @@ public class RPNController {
     @FXML
     private GridPane buttonGroup;
 
+    private final Calculator calculator = new Calculator();
+
     @FXML
     public void initialize() {
         // Find and configure all buttons within buttonGroup
@@ -28,7 +30,7 @@ public class RPNController {
         }
     }
 
-    public void calculate(ActionEvent event) {}
+    public void calculate(ActionEvent event) { input.setText(calculator.calculate(input.getText()).toString());}
 
     public void clear(ActionEvent event) {input.clear();}
 
