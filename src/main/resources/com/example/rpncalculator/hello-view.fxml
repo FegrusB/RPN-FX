@@ -4,7 +4,8 @@
 <?import javafx.scene.layout.*?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="295.0" prefWidth="356.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rpncalculator.RPNController">
-    <TextArea fx:id="input" layoutX="19.0" layoutY="26.0" prefHeight="86.0" prefWidth="310.0" />
+   <ToggleButton fx:id="shuntingToggle" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#toggleShuntingYard" text="RPN" />
+    <TextArea fx:id="input" layoutX="14.0" layoutY="47.0" prefHeight="86.0" prefWidth="310.0" />
     <GridPane fx:id="buttonGroup" layoutX="19.0" layoutY="148.0" prefHeight="134.0" prefWidth="326.0">
         <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
