@@ -14,6 +14,9 @@ public class Calculator {
         for (String s : inputSplit) {
             switch (s) {
                 case "+" -> calculatorStack.push(calculatorStack.pop() + calculatorStack.pop());
+                case "-" -> calculatorStack.push( calculatorStack.pop() - calculatorStack.pop());
+                case "*" -> calculatorStack.push(calculatorStack.pop() * calculatorStack.pop());
+                case "/" -> calculatorStack.push(calculatorStack.pop() / calculatorStack.pop());
                 default -> calculatorStack.push(Integer.parseInt(s));
             }
         }
