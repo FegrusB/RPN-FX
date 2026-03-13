@@ -4,7 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="295.0" prefWidth="356.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="295.0" prefWidth="356.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rpncalculator.RPNController">
    <children>
       <TextArea fx:id="input" layoutX="19.0" layoutY="26.0" prefHeight="86.0" prefWidth="310.0" />
       <VBox layoutX="19.0" layoutY="165.0" spacing="10.0">
@@ -12,8 +12,8 @@
             <HBox spacing="20.0">
                <children>
                   <Button fx:id="one" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onOneClicked" prefHeight="25.0" prefWidth="40.0" text="1" />
-                  <Button fx:id="two" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="40.0" text="2" />
-                  <Button fx:id="three" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="25.0" prefWidth="40.0" text="3" />
+                  <Button fx:id="two" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onTwoClicked" prefHeight="25.0" prefWidth="40.0" text="2" />
+                  <Button fx:id="three" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#onThreeClicked" prefHeight="25.0" prefWidth="40.0" text="3" />
                </children>
             </HBox>
             <HBox spacing="20.0">
